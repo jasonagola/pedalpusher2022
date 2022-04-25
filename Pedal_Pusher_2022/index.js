@@ -1,6 +1,5 @@
 var count = 0
 
-//Imagining Some backend save state that can be reloaded??
 var completionStatus = {
     box1: false,
     box2: false,
@@ -50,6 +49,13 @@ const bingoWinsArray = [
     [box5, box9, box13, box17, box21]
 ]
 
+const continuePlayingButton = document.getElementById('continuePlaying')
+const announceBingoScreen = document.getElementById('announceBingo')
+
+const continuePlaying = () => {
+    announceBingoScreen.classList.remove('show');
+}
+
 function toggleCheckMark(completionStatusCheck, bingoSquareId) {
     boxToCheckMark = document.getElementById(bingoSquareId)
     // console.log(boxToCheckMark)
@@ -67,10 +73,9 @@ const changeCompletionStatus = (bingoSquareId) => {
     toggleCheckMark(completionStatusCheck, bingoSquareId);
     if (checkForBingo()) {
         console.log("Winner")
-        document.getElementById('announce-Bingo').classList.add('announce-Bingo.show')
-        console.log(document.getElementById('announce-Bingo'))
+        document.getElementById('announceBingo').classList.add('show')
     }
-    }
+}
 
 //Grab additional info from info array/
 const displaySquareInfo = () => {
@@ -81,6 +86,7 @@ const displaySquareInfo = () => {
 function changeBoardClass() {
 
 }
+
 
 //Nav Selector Distributor: Get Clicked box ID and Check Nav Selector for appropriate functionality 
 function getBingoSquareID(e) {
@@ -127,3 +133,4 @@ function checkForBingo() {
 }
 
 bingoSquaresEventListener()
+continuePlayingButton.addEventListener('click', continuePlaying)
