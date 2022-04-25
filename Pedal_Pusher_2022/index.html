@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href = 'style.css'>
+</head>
+
+
+<header>
+    <img class = 'title' src = 'Resources/Images/SM-Pedal-Title.jpg'>
+
+
+<div class = 'counter'>
+    <h2>Total Squares Completed:</h2>
+    <h2 id = 'count'>0</h2>
+</div>
+
+
+<nav id = 'navBar'>
+    <h2>Select Option to Control the Board:</h2>
+    <h3 class = 'navBarUnselected' id='howToPlay' onclick = toggleNavBar(this)>How To Play</h3>
+    <h3 class = 'navBarUnselected' id ='resources' onclick = toggleNavBar(this)>Resources</h3>
+    <h3 class = 'navBarSelected' id='markUpBoard' onclick = toggleNavBar(this)>Check Off Completed Challenges</h3>
+</nav>
+</header>
+
+
+<div class = "bingoBoard">
+<!--First Row-->
+    <div class = "box" id = "box1">
+        <h2>Mystery Adventure</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box2">
+        <h2>Bike To Burger Frydays</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box3">
+        <h2>Fix-It Up!</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box4">
+        <h2>Bike Take-Out</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box5">
+        <h2>Beer Run!</h2>
+        <p>Basic description of the box</p>
+    </div>
+
+<!--Second Row-->
+
+    <div class = "box" id = "box6">
+        <h2>Taco Tuesday</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box7">
+        <h2>Night Rider</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box8">
+        <h2>National Bike To Work Day</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box9">
+        <h2>Beer Run!</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box10">
+        <h2>Mural Mania</h2>
+        <p>Basic description of the box</p>
+    </div>
+
+<!--Third Row-->
+
+    <div class = "box" id = "box11">
+        <h2>Keep It Casual</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box12">
+        <h2>Find King Neptune</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box freesquare" id = "box13">
+        <h2>Beer Run!</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box14">
+        <h2>Mystery Adventure</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box15">
+        <h2>Ridin' Dirty</h2>
+        <p>Basic description of the box</p>
+    </div>
+
+<!--Fourth Row-->
+
+    <div class = "box" id = "box16">
+        <h2>Hitch A Ride</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box17">
+        <h2>Beer Run!</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box18">
+        <h2>Pet Co-Pilot</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box19">
+        <h2>Local Bike Shop Love</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box20">
+        <h2>100 Mile Challenge</h2>
+        <p>Basic description of the box</p>
+    </div>
+
+<!--Fifth Row-->
+
+    <div class = "box" id = "box21">
+        <h2>Beer Run!</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box22">
+        <h2>Mystery Adventure</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box23">
+        <h2>Cross The Tracks</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box24">
+        <h2>Find The Rhino!</h2>
+        <p>Basic description of the box</p>
+    </div>
+    <div class = "box" id = "box25">
+        <h2>Bike Over Water</h2>
+        <p>Basic description of the box</p>
+    </div>
+</div>
+
+<div class = 'announce-Bingo' id = 'announceBingo'>
+    <div>
+        <h2>Bingo!</h2>
+        <p>Remember to post your bingo set on instagram and tag @smartmouthbeer</p>
+    </div>
+    <button id = 'continuePlaying'>Continue Playing</button>
+
+</div>
+<footer>
+    <img src = '/Users/jasonagola/github/Pedal-Pusher-2022/Resources/Images/SM-Logo_horizontal.png'>
+</footer>
+</html>
+
+
+<script src="index.js"></script>

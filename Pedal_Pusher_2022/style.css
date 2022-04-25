@@ -1,0 +1,145 @@
+/* Custom Font from Smartmouth */
+@font-face {
+    font-family: Fenway;
+    src: url('Resources/Fonts/Fenway-Sans.otf')
+    }
+
+html {
+    font-family: Fenway;
+    background-color: rgb(247, 209, 164);
+}
+
+header {
+    background-color: rgb(247, 209, 164);
+}
+
+.title {
+    width: 100%;
+    position: relative;
+}
+    
+.counter {
+    text-align: right;
+    line-height: 5px;
+    margin-right: 1vw;
+
+}
+
+.navBarSelected {
+    border: 3px solid black;
+}
+
+.navBarUnselected {
+    border: none;
+}
+nav h2 {
+    margin-bottom: 0px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+nav h3{
+    display: inline-flex;
+    padding: 0px 20px 0px 20px;
+}
+
+nav h3:hover {
+    text-decoration: underline;
+}
+
+.bingoBoard {
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+    background-color: rgb(247, 209, 164);
+    margin: 1rem;
+    border: 4px solid rgb(241, 159, 148);
+    position: relative;
+}
+
+.box {
+    background-color: rgb(247, 209, 164);
+    border: 4px solid rgb(241, 159, 148);
+    padding: .1rem;
+    aspect-ratio: 1 /1;
+    text-align: center;
+    justify-items: center;
+    position: relative
+}
+
+.box h2 {
+    align-items: center;
+    font-size: 2.3vw;
+    align-items: flex-start;   
+    pointer-events: none;
+}
+
+.box p {
+    font-size: 1.5vw;
+    pointer-events: none;
+}
+
+.boxChecked:hover {
+    border: 4px solid red;
+}
+
+.box:not(.boxChecked):hover {
+    background-image: url('Resources/Images/x-mark.jpg');
+    background-size: 100%;
+    background-blend-mode: luminosity;
+    opacity: 0.2;
+}
+
+.box:active {
+    background-image: url('Resources/Images/x-mark.jpg');
+    background-size: 100%;
+}
+
+
+.boxChecked {
+    background-image: url('Resources/Images/x-mark.jpg');
+    background-size: 100%;
+    color:gray;
+    flex: 1 0 0px;
+    position: relative;
+}
+
+.announce-Bingo {
+    display: none; 
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+}
+
+.announce-Bingo button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.announce-Bingo button:hover {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+.announce-Bingo.show {
+    display: flex;
+}
+
+footer {
+    text-align: center;
+    margin-top: 11vh;
+    margin-bottom: 5vh;
+}
+

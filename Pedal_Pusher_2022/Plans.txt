@@ -1,0 +1,13 @@
+-Build Board Class toggle that changes board class based on NavBar Selector.
+    -Want to enable different hover states based on NavBar selection
+
+-BingoWins
+    -Currently works for first win
+    -Need to address multiple wins and avoid "Winner" status 
+
+-Bingwins screen
+    -Create Bingo message
+    -Set as display non
+    -Build "announce-Bingo.show" class change based on bingoWin
+
+-
