@@ -55,7 +55,7 @@ function toggleCheckMark(completionStatusCheck, bingoSquareId) {
     // console.log(boxToCheckMark)
     completionStatusCheck ? boxToCheckMark.classList.remove('boxChecked'):boxToCheckMark.classList.add('boxChecked')
 }
-//Change Completion Status of Square when 'Check Off Completed Challenges" is Selected.  Should be cleaned up.  Save State prep/localstorage/backend eventually??
+//Change Completion Status of Square when 'Check Off Completed Challenges" is Selected. 
 const changeCompletionStatus = (bingoSquareId) => {
     // console.log("Changing" + bingoSquareId)
     let completionStatusCheck = completionStatus[bingoSquareId] 
@@ -68,6 +68,7 @@ const changeCompletionStatus = (bingoSquareId) => {
     if (checkForBingo()) {
         console.log("Winner")
         document.getElementById('announce-Bingo').classList.add('announce-Bingo.show')
+        console.log(document.getElementById('announce-Bingo'))
     }
     }
 
