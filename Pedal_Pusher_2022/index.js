@@ -51,6 +51,10 @@ const bingoWinsArray = [
 
 const continuePlayingButton = document.getElementById('continuePlaying')
 const announceBingoScreen = document.getElementById('announceBingo')
+const navBarItems = document.getElementById('navBar').children
+const bingoSquares = document.querySelectorAll('.box')
+const bingoSquaresArray = Array.from(bingoSquares)
+const navBarState = getNavBarState()
 
 const continuePlaying = () => {
     announceBingoScreen.classList.remove('show');
@@ -82,13 +86,30 @@ const displaySquareInfo = () => {
 
 }
 
-//Change Class of Board for appropriate hover clicker
-function changeBoardClass() {
+//Change Class of Bingo Squares for appropriate hover clicker
+function updateHoverStateClass() {
+    for (key in navBarArray) {
+        navBarArray[key] ? bingoSquaresArray.forEach(bingoSquare => {
+            bingoSquare.classList.add(key)
+        }
+        ):
+        bingoSquaresArray.forEach(bingoSquare => {
+            bingoSquare.classList.remove(key)
+        })
 
+    }
 }
 
+//Return Navbar State 
+function getNavBarState() {
+    for (key in navBarArray) {
+        if (navBarArray[key] === true) {
+            return key
+        }
+    }
+}
 
-//Nav Selector Distributor: Get Clicked box ID and Check Nav Selector for appropriate functionality 
+//Nav Selector Distributor: Get Clicked box ID and Check Nav Selector for appropriate functionality (Want to rebuild)
 function getBingoSquareID(e) {
     var bingoSquareId = e.target.id
     // console.log(bingoSquareId)
@@ -104,15 +125,13 @@ function getBingoSquareID(e) {
 
 // Create Array of Bingo Squares and Assign click EventListener to each, pass of to Nav selector distributor
 function bingoSquaresEventListener() {
-    var bingoSquares = Array.from(document.querySelectorAll('.box'));
-        for (var i = 0; i<bingoSquares.length; i++) {
-            bingoSquares[i].addEventListener('click', getBingoSquareID)
-        }
+    for (var i = 0; i<bingoSquaresArray.length; i++) {
+        bingoSquaresArray[i].addEventListener('click', getBingoSquareID)
     }
+}
 
-//Nav Bar Selector
+//Nav Bar Toggle, eventlistener on element in HTML
 function toggleNavBar(target) {
-    var navBarItems = document.getElementById('navBar').children;
     for (var i = 0; i < navBarItems.length; i++) {
         navBarItems[i].className = "navBarUnselected";
     }
@@ -121,6 +140,7 @@ function toggleNavBar(target) {
         navBarArray[nav] = false;
     }
     navBarArray[target.id] = true
+    updateHoverStateClass()
 }
 
 //Check For Bingo Wins
@@ -132,5 +152,12 @@ function checkForBingo() {
     })
 }
 
+
+//Board Setup/StartGame function
+// -included: set event listener for each box
+// -unfinished: hover class setup
+
+
 bingoSquaresEventListener()
 continuePlayingButton.addEventListener('click', continuePlaying)
+updateHoverStateClass()

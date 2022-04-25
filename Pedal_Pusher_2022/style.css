@@ -81,18 +81,38 @@ nav h3:hover {
     border: 4px solid red;
 }
 
-.box:not(.boxChecked):hover {
+.box.markUpBoard:not(.boxChecked):hover {
     background-image: url('Resources/Images/x-mark.jpg');
     background-size: 100%;
-    background-blend-mode: luminosity;
     opacity: 0.2;
 }
 
-.box:active {
+.box.markUpBoard:active {
     background-image: url('Resources/Images/x-mark.jpg');
     background-size: 100%;
 }
 
+.box.howToPlay:not(.boxChecked):hover {
+    background-image: url('Resources/Images/clickForMoreInfo.png');
+    background-size: 100%;
+    opacity: 0.2;
+}
+
+.box.howToPlay:active {
+    background-image: url('Resources/Images/clickForMoreInfo.png');
+    background-size: 100%;
+}
+
+.box.resources:not(.boxChecked):hover {
+    background-image: url('Resources/Images/additionalResources.png');
+    background-size: 100%;
+    opacity: 0.2;
+}
+
+.box.resources:active {
+    background-image: url('Resources/Images/additionalResources.png');
+    background-size: 100%;
+}
 
 .boxChecked {
     background-image: url('Resources/Images/x-mark.jpg');
