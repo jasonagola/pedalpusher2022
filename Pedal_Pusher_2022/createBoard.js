@@ -40,8 +40,9 @@ function insertInformation() {
     for (var i = 0; i<bingoSquaresArray.length; i++) {
         let title = availableSquares[i][0];
         let description = availableSquares[i][1];
-        bingoSquaresArray[i].childNodes[1].innerHTML = title
-        bingoSquaresArray[i].childNodes[2].innerHTML = description
+        bingoSquareElement = bingoSquaresArray[i].children
+        bingoSquareElement[0].innerHTML = title
+        bingoSquareElement[1].innerHTML = description
     }
 }
 
@@ -50,4 +51,4 @@ function createBoard() {
     insertInformation()
 }
 
-createBoard()
+console.log(bingoSquaresArray[2].children)
